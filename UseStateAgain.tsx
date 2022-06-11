@@ -7,21 +7,21 @@ import './style.css';
 export default function UseStateAgain() {
   const [count, setCount] = React.useState(0); // For use UseState
 
-  const counterReducer = (state, action) => {
-    switch (action.type) {
-      case 'RESET':
-        return { count: 0 };
-      case 'INC':
-        return { count: state.count + 1 };
-      case 'DEC':
-        return { count: state.count - 1 };
-      default:
-        throw new Error('action not found');
-    }
-    return state;
-  };
+  // const counterReducer = (state, action) => {
+  //   switch (action.type) {
+  //     case 'RESET':
+  //       return { count: 0 };
+  //     case 'INC':
+  //       return { count: state.count + 1 };
+  //     case 'DEC':
+  //       return { count: state.count - 1 };
+  //     default:
+  //       throw new Error('action not found');
+  //   }
+  //   return state;
+  // };
 
-  const [state, dispatch] = React.useReducer(counterReducer, { count: 0 });
+  // const [state, dispatch] = React.useReducer(counterReducer, { count: 0 });
 
   return (
     <div>
